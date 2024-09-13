@@ -1,0 +1,31 @@
+---
+version: "2.0"
+services:
+  template-website:
+    image: nomorelies/template-website:v1
+    expose:
+      - port: 80
+        as: 80
+        to:
+          - global: true
+profiles:
+  compute:
+    template-website:
+      resources:
+        cpu:
+          units: 0.5
+        memory:
+          size: 512Mi
+        storage:
+          - size: 512Mi
+  placement:
+    dcloud:
+      pricing:
+        template-website:
+          denom: uakt
+          amount: 10000
+deployment:
+  template-website:
+    dcloud:
+      profile: template-website
+      count: 1
