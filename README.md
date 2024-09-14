@@ -2,7 +2,7 @@
 
 This is an example of how to run a simple HTML/CSS/JS site on Akash.
 
-Demo: https://e9jheis2plf9f313tdfek5f76g.ingress.akash-palmito.org/
+Demo: https://k4s8horo5tcvh1kuli8475hqik.ingress.validatornode.com/
 
 ## Build and host the Docker image
 To deploy on Akash you need a docker image. Build a docker image from the Dockerfile and push it to Docker Hub.
